@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create File</title>
+</head>
+<body>
+  <h1>Create File</h1>
+
+  <p>
+      <form action="{{url_for('views.run_create_file')}}" method="post">
+      <label for="Name">File Name:</label><br>
+      <input type="text" id="Name" name="Name"><br>
+      <label for="Height">Height:</label><br>
+      <input type="number" id="Height" name="Height" min="50" max="300"><br>
+      <label for="Width">Height:</label><br>
+      <input type="number" id="Width" name="Width" min="50" max="300"><br>
+      <label for="Color">Color Ramp</label>
+      <select id="Color" name="Color">
+          <option value="Spectral">Spectral</option>
+          <option value="coolwarm">coolwarm</option>
+          <option value="seismic">seismic</option>
+          <option value="hsv">hsv</option>
+          <option value="twilight">twilight</option>
+      </select>
+      <br>
+      <label for="Style">Style</label>
+      <select id="Style" name="Style">
+          <option value="spline36">spline36</option>
+          <option value="nearest">nearest</option>
+          <option value="hanning">hanning</option>
+          <option value="gaussian">gaussian</option>
+          <option value="sinc">sinc</option>
+      </select>
+      <br>
+      <input type="submit" value="Submit">
+  </form>
+  </p>
+</body>
+</html>
